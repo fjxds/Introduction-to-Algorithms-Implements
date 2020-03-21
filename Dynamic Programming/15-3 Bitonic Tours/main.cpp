@@ -54,7 +54,9 @@ int main(int argc, char** argv) {
 			c[j-1][j]=c[k][j-1]+dis(v[k],v[j]);
 		}
 	}
-	c[n-1][n-1]=c[n-2][n-1]+dis(v[n-2],v[n-1]);
+	for (int i=0;i<n-1;i++)
+	if (c[n-1][n-1]>c[i][n-1]+dis(v[i],v[n-1]))
+	c[n-1][n-1]=c[i][n-1]+dis(v[i],v[n-1]);
 	cout<<c[n-1][n-1]<<endl;
 	return 0;
 }
