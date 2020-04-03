@@ -33,8 +33,8 @@ vector<int> Articulated()
 				ff=false;
 				break;
 			}
-			if (v[i].low!=tmp.low)
-			equal=false;
+//			if (v[i].low!=tmp.low)
+//			equal=false;
 			p=p->next;
 		}
 		if (v[i].low!=v[i].d)
